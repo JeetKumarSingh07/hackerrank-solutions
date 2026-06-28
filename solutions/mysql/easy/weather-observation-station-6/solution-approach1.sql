@@ -6,6 +6,11 @@
 -- Language    mysql
 -- Status      Accepted
 -- Submitted   2026-06-28, 09:34 p.m.
+-- Technique   multiple-like-pattern
+-- Time        O(N)
+-- Space       O(N)
+-- Trick       Use multiple LIKE patterns with OR operators to filter strings starting with specific vowels efficiently.
+-- Hint        LIKE 'A%' is case-insensitive in default MySQL collations.
 -- ──────────────────────────────────────────────────
 
 /*
