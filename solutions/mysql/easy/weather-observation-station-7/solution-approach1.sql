@@ -6,6 +6,11 @@
 -- Language    mysql
 -- Status      Accepted
 -- Submitted   2026-06-29, 11:24 a.m.
+-- Technique   pattern-matching-filter
+-- Time        O(N)
+-- Space       O(N)
+-- Trick       Use the LIKE operator with wildcard patterns to filter strings ending in specific characters efficiently.
+-- Hint        Use OR logic for multiple character suffixes.
 -- ──────────────────────────────────────────────────
 
 /*
