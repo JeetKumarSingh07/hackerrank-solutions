@@ -6,6 +6,11 @@
 -- Language    mysql
 -- Status      Accepted
 -- Submitted   2026-06-29, 11:25 a.m.
+-- Technique   like-pattern-matching
+-- Time        O(N*M)
+-- Space       O(N)
+-- Trick       Use multiple LIKE patterns with wildcards to filter strings starting and ending with vowels, avoiding complex regex overhead.
+-- Hint        LIKE is case-insensitive in default MySQL collations.
 -- ──────────────────────────────────────────────────
 
 /*
