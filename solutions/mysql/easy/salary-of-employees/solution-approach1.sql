@@ -6,6 +6,11 @@
 -- Language    mysql
 -- Status      Accepted
 -- Submitted   2026-07-01, 02:11 p.m.
+-- Technique   conditional-row-filtering
+-- Time        O(N log N)
+-- Space       O(N)
+-- Trick       Use a standard WHERE clause with logical AND operators to filter rows before applying the mandatory ORDER BY clause for sorting.
+-- Hint        ORDER BY defaults to ASC; use employee_id for deterministic results.
 -- ──────────────────────────────────────────────────
 
 /*
