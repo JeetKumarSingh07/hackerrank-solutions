@@ -6,6 +6,11 @@
 -- Language    mysql
 -- Status      Accepted
 -- Submitted   2026-07-01, 02:09 p.m.
+-- Technique   multi-clause-not-like
+-- Time        O(N * M)
+-- Space       O(1)
+-- Trick       Use multiple NOT LIKE clauses to filter strings by both start and end characters simultaneously without complex regex overhead.
+-- Hint        SQL LIKE patterns are case-insensitive in many default MySQL collations.
 -- ──────────────────────────────────────────────────
 
 /*
