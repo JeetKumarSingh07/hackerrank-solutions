@@ -6,6 +6,11 @@
 -- Language    mysql
 -- Status      Accepted
 -- Submitted   2026-07-01, 02:06 p.m.
+-- Technique   multi-pattern-exclusion
+-- Time        O(N)
+-- Space       O(N)
+-- Trick       Use multiple NOT LIKE clauses to filter strings ending in specific characters, which is more readable than complex regex in standard SQL.
+-- Hint        Use NOT LIKE with wildcard % for suffix matching.
 -- ──────────────────────────────────────────────────
 
 /*
