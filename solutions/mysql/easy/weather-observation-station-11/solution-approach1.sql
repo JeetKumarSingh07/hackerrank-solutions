@@ -6,6 +6,11 @@
 -- Language    mysql
 -- Status      Accepted
 -- Submitted   2026-07-01, 02:06 p.m.
+-- Technique   multi-clause-not-like
+-- Time        O(N)
+-- Space       O(N)
+-- Trick       Use logical OR to combine exclusion filters for both starting and ending characters to identify strings failing either vowel constraint.
+-- Hint        Leverage NOT LIKE with wildcard patterns for character exclusion.
 -- ──────────────────────────────────────────────────
 
 /*
