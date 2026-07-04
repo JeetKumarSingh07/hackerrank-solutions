@@ -6,6 +6,11 @@
 -- Language    mysql
 -- Status      Accepted
 -- Submitted   2026-07-04, 11:43 a.m.
+-- Technique   case-when-logic
+-- Time        O(N)
+-- Space       O(1)
+-- Trick       Check the triangle inequality theorem first to invalidate impossible shapes before categorizing the remaining valid triangles by side equality.
+-- Hint        Order matters: check invalid cases before specific triangle types.
 -- ──────────────────────────────────────────────────
 
 /*
