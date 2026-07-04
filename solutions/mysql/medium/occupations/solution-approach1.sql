@@ -6,6 +6,11 @@
 -- Language    mysql
 -- Status      Accepted
 -- Submitted   2026-07-04, 09:23 p.m.
+-- Technique   pivot-row-number
+-- Time        O(N log N)
+-- Space       O(N)
+-- Trick       Use ROW_NUMBER to create grouping keys and MAX with CASE to pivot categorical data into columns.
+-- Hint        Use PARTITION BY to align names within each occupation group.
 -- ──────────────────────────────────────────────────
 
 SELECT
