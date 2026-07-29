@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-07-29, 08:23 a.m.
+# Technique   conditional-branching-logic
+# Time        O(1)
+# Space       O(1)
+# Insight     The implementation evaluates the parity and magnitude of the input integer against four distinct conditional branches to determine the output string.
+# Interview   Before: "I would use a series of if-else statements to check the parity and range constraints." After: "The solution uses O(1) time and space by mapping the input integer to the required output based on the parity and range rules defined in the problem statement."
+# Pitfalls    (1) Failing to include the inclusive boundaries 2, 5, 6, and 20 in the conditional logic.  (2) Incorrectly ordering the conditional checks, which could lead to overlapping ranges being evaluated prematurely.  (3) Misinterpreting the parity check for odd numbers, which must be evaluated before the even-number range constraints.
 # ──────────────────────────────────────────────────
 
 #!/bin/python3
