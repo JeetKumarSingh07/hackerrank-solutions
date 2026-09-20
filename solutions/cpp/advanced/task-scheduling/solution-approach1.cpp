@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-09-20, 02:26 p.m.
+// Technique   segment-tree-lazy-propagation
+// Time        O(T * log(MAXD))
+// Space       O(MAXD)
+// Insight     The segment tree maintains the maximum value of (completion_time - deadline) across all possible deadlines by applying range updates for task durations and querying the global maximum.
+// Interview   Before: "How would you track the maximum overshoot as tasks arrive?" After: "I used a segment tree with lazy propagation to perform O(log MAXD) updates and queries, ensuring the maximum overshoot is tracked efficiently as each task's duration is added to all relevant deadlines."
+// Pitfalls    (1) The segment tree range must cover the maximum possible deadline value defined in the constraints.  (2) The initial state of the segment tree must correctly represent the baseline overshoot for each deadline before any tasks are added.  (3) The maximum overshoot must be clamped to zero because a task finishing before its deadline results in a negative overshoot value.
 // ──────────────────────────────────────────────────
 
 #include <iostream>
