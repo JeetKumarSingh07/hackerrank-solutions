@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-10-06, 12:06 p.m.
+// Technique   breadth-first-search-adjacency-list
+// Time        O(q * (n + m))
+// Space       O(n + m)
+// Insight     The algorithm uses a queue to perform a level-order traversal, assigning a weight of six to each edge and maintaining a distance array initialized to negative one to track unvisited nodes.
+// Interview   Before: "How would you find the shortest path in an unweighted graph?" After: "I would use BFS to explore nodes layer by layer. Since each edge has a constant weight of six, BFS guarantees the shortest path in O(n + m) time, where n is the number of nodes and m is the number of edges."
+// Pitfalls    (1) Failing to handle the 1-based indexing of nodes correctly when accessing the adjacency list or distance array.  (2) Forgetting to exclude the starting node from the final output as required by the problem statement.  (3) Assuming edge weights are 1 instead of the specified weight of 6, leading to incorrect distance calculations.
 // ──────────────────────────────────────────────────
 
 #include <iostream>
