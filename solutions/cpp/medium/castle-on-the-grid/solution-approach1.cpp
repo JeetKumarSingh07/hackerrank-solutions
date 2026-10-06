@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-10-06, 12:14 p.m.
+// Technique   breadth-first-search-with-line-traversal
+// Time        O(n^3)
+// Space       O(n^2)
+// Insight     The algorithm performs a breadth-first search where each state transition explores all reachable cells in a straight line until a boundary or obstacle is encountered, updating the distance for each newly visited cell.
+// Interview   Before: "I would use a standard BFS to find the shortest path." After: "Since the piece moves in lines, I must extend the search in each direction until hitting an obstacle. This results in O(n^3) time complexity, as each of the n^2 cells can be visited and scanned in four directions."
+// Pitfalls    (1) Failing to update the distance for all cells in the line, which prevents subsequent paths from correctly identifying the shortest distance to those intermediate cells.  (2) Stopping the line traversal prematurely upon encountering a previously visited cell, which prevents the algorithm from reaching cells further along the same line.  (3) Incorrectly resetting the search direction or boundary conditions, leading to out-of-bounds memory access when checking grid[nx][ny].
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
