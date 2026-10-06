@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-10-06, 12:12 p.m.
+// Technique   breadth-first-search-adjacency-list
+// Time        O(n + m)
+// Space       O(n + m)
+// Insight     The algorithm uses a queue to perform a level-order traversal, assigning a cumulative distance of six units per edge to each unvisited node.
+// Interview   Before: "How do I calculate shortest paths in an unweighted graph?" After: "Use BFS to explore nodes layer by layer. Since each edge has a fixed weight of 6, you multiply the BFS depth by 6. This approach runs in O(n + m) time and space, correctly handling unreachable nodes by returning -1."
+// Pitfalls    (1) Failing to exclude the starting node from the final result array as required by the problem statement.  (2) Incorrectly initializing the distance vector with 0 instead of -1, which prevents distinguishing between the start node and unreachable nodes.  (3) Forgetting to multiply the BFS depth by 6, as the problem defines each edge weight as 6 units.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
