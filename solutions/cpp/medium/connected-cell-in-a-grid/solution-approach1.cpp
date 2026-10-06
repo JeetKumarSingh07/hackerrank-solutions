@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-10-06, 12:19 p.m.
+// Technique   recursive-dfs-in-place-marking
+// Time        O(n * m)
+// Space       O(n * m)
+// Insight     The algorithm performs a depth-first search to traverse connected components, marking visited cells as zero to ensure each filled cell is processed exactly once.
+// Interview   Before: "How would you find the largest connected region in a grid?" After: "I would use DFS to explore all 8 neighbors of each cell, marking visited cells to avoid cycles. This approach runs in O(n * m) time and space, effectively handling the grid constraints by visiting each cell at most once."
+// Pitfalls    (1) Failing to mark visited cells as 0 leads to infinite recursion.  (2) Ignoring diagonal neighbors violates the problem definition of connectivity.  (3) Incorrectly handling boundary conditions in the DFS base case causes out-of-bounds memory access.
 // ──────────────────────────────────────────────────
 
 #include <bits/stdc++.h>
