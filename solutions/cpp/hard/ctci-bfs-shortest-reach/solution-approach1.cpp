@@ -7,6 +7,12 @@
 // Language    cpp
 // Status      Accepted
 // Submitted   2026-10-06, 12:16 p.m.
+// Technique   breadth-first-search-adjacency-list
+// Time        O(V + E)
+// Space       O(V + E)
+// Insight     The algorithm performs a standard breadth-first search on an undirected graph, assigning a weight of six to each edge and tracking visited nodes via a distance array initialized to negative one.
+// Interview   Before: "How would you find the shortest path in an unweighted graph?" After: "I would use BFS to explore layer by layer. Since each edge has a weight of six, I multiply the BFS level by six to get the distance, achieving O(V + E) time complexity."
+// Pitfalls    (1) Failing to convert 1-based input indices to 0-based indices, which causes out-of-bounds access in the adjacency list.  (2) Including the starting node in the final output list, which violates the requirement to exclude the start node.  (3) Forgetting to initialize the distance array with negative one, which prevents correct identification of unreachable nodes.
 // ──────────────────────────────────────────────────
 
 #include <cmath>
